@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Red Dolphin for SKALA",
+  "description": "SKALA 작업을 돕는 Chrome 확장 프로그램입니다.",
+  "version": "0.1.0",
+  "action": {"default_title":"Red Dolphin","default_popup":"popup.html"},
+  "background": {"service_worker":"assets/background.js","type":"module"},
+  "options_page": "options.html",
+  "permissions": ["storage"]
+}

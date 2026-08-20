@@ -1,0 +1,26 @@
+{
+  "name": "red-dolphin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "npm run type-check && vite build",
+    "type-check": "vue-tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.41"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.2.5",
+    "@types/node": "^26.2.0",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "typescript": "~6.0.3",
+    "vite": "^8.2.1",
+    "vue-tsc": "^3.3.10"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
