@@ -90,7 +90,6 @@ async function applyMobileUserAgent(tabId: number): Promise<void> {
                 },
                 condition: {
                     tabIds: [tabId],
-                    requestDomains: ["auth.skala-ai.com"],
                     resourceTypes: [
                         "main_frame",
                         "sub_frame",

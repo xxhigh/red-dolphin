@@ -73,7 +73,7 @@ npm run build
 팝업에서 **출석체크**를 누르면 다음 순서로 실행됩니다.
 
 1. 새 탭을 생성합니다.
-2. 해당 탭의 출석 도메인 요청에 모바일 User-Agent를 적용합니다.
+2. 해당 탭의 모든 도메인 요청에 모바일 User-Agent를 적용합니다.
 3. `https://auth.skala-ai.com`을 엽니다.
 4. 페이지 로딩과 드롭다운 옵션 생성을 기다립니다.
 5. 사용자 이름, 캠퍼스 코드 `US`, 반 값을 자동으로 입력합니다.
@@ -133,9 +133,9 @@ public/
 - `storage`: 사용자 정보와 Zoom 설정 저장
 - `scripting`: 출석 페이지 자동 입력
 - `declarativeNetRequestWithHostAccess`: 출석 탭의 User-Agent 변경
-- `https://auth.skala-ai.com/*`: 출석 자동화 대상 도메인
+- `<all_urls>`: 출석 탭이 Google 인증 페이지로 이동해도 모바일 User-Agent 유지
 
-새로운 도메인을 자동화 대상으로 추가할 때는 `public/manifest.json`의 `host_permissions`도 검토해야 합니다. 비밀번호, API 키, 세션 정보와 개인 설정값을 저장소에 커밋하지 마세요.
+호스트 권한은 출석체크로 생성된 탭의 User-Agent를 인증 과정 전체에서 유지하는 용도로만 사용합니다. 자동 입력 스크립트는 출석 페이지에만 삽입됩니다. 비밀번호, API 키, 세션 정보와 개인 설정값을 저장소에 커밋하지 마세요.
 
 ## 검증
 
