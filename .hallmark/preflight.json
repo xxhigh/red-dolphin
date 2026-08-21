@@ -1,0 +1,13 @@
+{
+    "date": "2026-08-21",
+    "framework": "Vue 3 with Vite",
+    "font_stack": "Inter, Pretendard, Noto Sans KR, system UI",
+    "palette": "hard-coded hex colours in src/styles.css",
+    "motion": "motion-cut; no motion library installed",
+    "spacing": "no existing token scale",
+    "preserved": [
+        "Vue single-file component structure",
+        "shared stylesheet entry",
+        "existing popup and options behavior"
+    ]
+}

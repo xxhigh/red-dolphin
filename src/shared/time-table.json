@@ -1,0 +1,2761 @@
+{
+    "source": "time_table.pdf",
+    "period": {
+        "start": "2026-07-14",
+        "end": "2026-12-11"
+    },
+    "classColumns": [
+        {
+            "room": "201",
+            "classNumber": 1
+        },
+        {
+            "room": "202",
+            "classNumber": 2
+        },
+        {
+            "room": "203",
+            "classNumber": 3
+        },
+        {
+            "room": "204",
+            "classNumber": 4
+        }
+    ],
+    "entries": [
+        {
+            "date": "2026-07-14",
+            "day": "화",
+            "week": 1,
+            "subject": "팀빌딩(안보람), Git 이해/활용 (5h)",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "백정열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤선영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "신인철",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-07-15",
+            "day": "수",
+            "week": 1,
+            "subject": "데이터 분석을 위한 Python 이해",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "백정열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤선영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "이애본",
+                    "isMainProfessor": false
+                }
+            ],
+            "notes": [
+                "정윤석 불가"
+            ]
+        },
+        {
+            "date": "2026-07-16",
+            "day": "목",
+            "week": 1,
+            "subject": "데이터 분석을 위한 Python 이해",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "백정열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤선영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "이애본",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-07-17",
+            "day": "금",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-07-18",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-07-19",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-07-20",
+            "day": "월",
+            "week": 2,
+            "subject": "스마트 데이터 이해 및 활용",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "최진철",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "우재남",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "엄진영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-07-21",
+            "day": "화",
+            "week": 2,
+            "subject": "스마트 데이터 이해 및 활용",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "최진철",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "우재남",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "엄진영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-07-22",
+            "day": "수",
+            "week": 2,
+            "subject": "스마트 데이터 이해 및 활용",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "최진철",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "우재남",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "엄진영",
+                    "isMainProfessor": false
+                }
+            ],
+            "notes": [
+                "정윤석 불가"
+            ]
+        },
+        {
+            "date": "2026-07-23",
+            "day": "목",
+            "week": 2,
+            "subject": "HTML, CSS, JavaScript",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "우재남",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "정윤석",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "엄진영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-07-24",
+            "day": "금",
+            "week": 2,
+            "subject": "HTML, CSS, JavaScript",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "우재남",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "정윤석",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "엄진영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-07-25",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-07-26",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-07-27",
+            "day": "월",
+            "week": 3,
+            "subject": "데이터 분석 개요 및 기초통계",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "이상희",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "김덕우",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-07-28",
+            "day": "화",
+            "week": 3,
+            "subject": "데이터 분석 개요 및 기초통계",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "이상희",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "김덕우",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-07-29",
+            "day": "수",
+            "week": 3,
+            "subject": "실전 Feature Engineering",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "이상희",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "김덕우",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-07-30",
+            "day": "목",
+            "week": 3,
+            "subject": "Java, SpringBoot, Rest API 구현",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-07-31",
+            "day": "금",
+            "week": 3,
+            "subject": "Java, SpringBoot, Rest API 구현",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-01",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-08-02",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-08-03",
+            "day": "월",
+            "week": 4,
+            "subject": "Java, SpringBoot, Rest API 구현",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-04",
+            "day": "화",
+            "week": 4,
+            "subject": "Java, SpringBoot, Rest API 구현",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-05",
+            "day": "수",
+            "week": 4,
+            "subject": "Java, SpringBoot, Rest API 구현",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-06",
+            "day": "목",
+            "week": 4,
+            "subject": "Agile 방법론 및 MSA 개발",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "박보경",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-07",
+            "day": "금",
+            "week": 4,
+            "subject": "Agile 방법론 및 MSA 개발",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "박보경",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-08",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-08-09",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-08-10",
+            "day": "월",
+            "week": 5,
+            "subject": "Front-framework: Vue.js",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "우재남",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "최찬영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "강병호",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-11",
+            "day": "화",
+            "week": 5,
+            "subject": "Front-framework: Vue.js",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "우재남",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "최찬영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "강병호",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-12",
+            "day": "수",
+            "week": 5,
+            "subject": "Front-framework: Vue.js",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "우재남",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "최찬영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "강병호",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-13",
+            "day": "목",
+            "week": 5,
+            "subject": "Front-framework: Vue.js",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "우재남",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "최찬영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "강병호",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-14",
+            "day": "금",
+            "week": 5,
+            "subject": "특강(취업특강)",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "최헌영",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-08-15",
+            "day": "토",
+            "week": null,
+            "subject": "특강(취업특강), 12시 종료(8시~12시, 점심X)",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "최헌영",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-08-16",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-08-17",
+            "day": "월",
+            "week": null,
+            "subject": "대체휴일 (광복절)",
+            "classes": []
+        },
+        {
+            "date": "2026-08-18",
+            "day": "화",
+            "week": 6,
+            "subject": "웹 서비스 개발 mini-Project",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "권기창",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-08-19",
+            "day": "수",
+            "week": 6,
+            "subject": "웹 서비스 개발 mini-Project",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "권기창",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-08-20",
+            "day": "목",
+            "week": 6,
+            "subject": "웹 서비스 개발 mini-Project",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "김성영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "권기창",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-08-21",
+            "day": "금",
+            "week": 6,
+            "subject": "특강 (도메인특강, 프로젝트 현장 사례)",
+            "classes": []
+        },
+        {
+            "date": "2026-08-22",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-08-23",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-08-24",
+            "day": "월",
+            "week": 7,
+            "subject": "Prompt 설계와 Context",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "최진철",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "정동엽",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "한성훈",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-25",
+            "day": "화",
+            "week": 7,
+            "subject": "LLM과 Transformer 아키텍처",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "권기창",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "정동엽",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "한성훈",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-26",
+            "day": "수",
+            "week": 7,
+            "subject": "LLM과 Transformer 아키텍처",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "권기창",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "정동엽",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "한성훈",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-27",
+            "day": "목",
+            "week": 7,
+            "subject": "sLLM 구현 및 Fine Tunning",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "권기창",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "정동엽",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "한성훈",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-28",
+            "day": "금",
+            "week": 7,
+            "subject": "sLLM 구현 및 Fine Tunning",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "권기창",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "정동엽",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "한성훈",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-08-29",
+            "day": "토",
+            "week": 7,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-08-30",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-08-31",
+            "day": "월",
+            "week": 8,
+            "subject": "머신러닝 및 딥러닝 이해",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "이은호",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "박길식",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정동엽",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-01",
+            "day": "화",
+            "week": 8,
+            "subject": "머신러닝 및 딥러닝 이해",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "이은호",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "박길식",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정동엽",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-02",
+            "day": "수",
+            "week": 8,
+            "subject": "머신러닝 및 딥러닝 이해",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "이은호",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "박길식",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정동엽",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-03",
+            "day": "목",
+            "week": 8,
+            "subject": "모델 개발 및 최적화",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "이은호",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "박길식",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정동엽",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-04",
+            "day": "금",
+            "week": 8,
+            "subject": "모델 개발 및 최적화",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "이은호",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "박길식",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정동엽",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-05",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-09-06",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-09-07",
+            "day": "월",
+            "week": 9,
+            "subject": "컨테이너 이해 및 애플리케이션 컨테이너화",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "신인철",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김범준",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-08",
+            "day": "화",
+            "week": 9,
+            "subject": "컨테이너 이해 및 애플리케이션 컨테이너화",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "신인철",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김범준",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-09",
+            "day": "수",
+            "week": 9,
+            "subject": "Spring AI",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조재형",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김범준",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-10",
+            "day": "목",
+            "week": 9,
+            "subject": "Spring AI",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조재형",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김범준",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-11",
+            "day": "금",
+            "week": 9,
+            "subject": "쿠버네티스 이해 및 애플리케이션 배포",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조재형",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정환열",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-12",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-09-13",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-09-14",
+            "day": "월",
+            "week": 10,
+            "subject": "쿠버네티스 이해 및 애플리케이션 배포",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조재형",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정환열",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-15",
+            "day": "화",
+            "week": 10,
+            "subject": "모델 서빙 및 AIOps 구성",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "이현민",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-09-16",
+            "day": "수",
+            "week": 10,
+            "subject": "모델 서빙 및 AIOps 구성",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "이현민",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-09-17",
+            "day": "목",
+            "week": 10,
+            "subject": "모델 서빙 및 AIOps 구성",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "이현민",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-09-18",
+            "day": "금",
+            "week": 10,
+            "subject": "생성형 AI 서비스 개발의 이해/활용 (LangChain)",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-19",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-09-20",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-09-21",
+            "day": "월",
+            "week": 11,
+            "subject": "생성형 AI 서비스 개발의 이해/활용 (LangChain)",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-22",
+            "day": "화",
+            "week": 11,
+            "subject": "생성형 AI 서비스 개발의 이해/활용 (LangChain)",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-23",
+            "day": "수",
+            "week": null,
+            "subject": "자체휴강",
+            "classes": []
+        },
+        {
+            "date": "2026-09-24",
+            "day": "목",
+            "week": null,
+            "subject": "추석연휴",
+            "classes": []
+        },
+        {
+            "date": "2026-09-25",
+            "day": "금",
+            "week": null,
+            "subject": "추석연휴",
+            "classes": []
+        },
+        {
+            "date": "2026-09-26",
+            "day": "토",
+            "week": null,
+            "subject": "추석연휴",
+            "classes": []
+        },
+        {
+            "date": "2026-09-27",
+            "day": "일",
+            "week": null,
+            "subject": "추석연휴",
+            "classes": []
+        },
+        {
+            "date": "2026-09-28",
+            "day": "월",
+            "week": 12,
+            "subject": "RAG Pipeline 설계 및 구축",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정윤석",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-29",
+            "day": "화",
+            "week": 12,
+            "subject": "RAG Pipeline 설계 및 구축",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정윤석",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-09-30",
+            "day": "수",
+            "week": 12,
+            "subject": "RAG Pipeline 설계 및 구축",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "정윤석",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-01",
+            "day": "목",
+            "week": 12,
+            "subject": "데이터 분석 mini-Project",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-10-02",
+            "day": "금",
+            "week": 12,
+            "subject": "데이터 분석 mini-Project",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "윤재성",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-10-03",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-10-04",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-10-05",
+            "day": "월",
+            "week": null,
+            "subject": "대체휴일(개천절)",
+            "classes": []
+        },
+        {
+            "date": "2026-10-06",
+            "day": "화",
+            "week": 13,
+            "subject": "쿠버네티스 실무 심화",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "신인철",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "엄진영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-07",
+            "day": "수",
+            "week": 13,
+            "subject": "쿠버네티스 실무 심화",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "신인철",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "엄진영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-08",
+            "day": "목",
+            "week": 13,
+            "subject": "쿠버네티스 실무 심화",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "신인철",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "엄진영",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-09",
+            "day": "금",
+            "week": null,
+            "subject": "한글날",
+            "classes": []
+        },
+        {
+            "date": "2026-10-10",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-10-11",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-10-12",
+            "day": "월",
+            "week": 14,
+            "subject": "AI Agent 설계 및 구축",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김범준",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-13",
+            "day": "화",
+            "week": 14,
+            "subject": "AI Agent 설계 및 구축",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김범준",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-14",
+            "day": "수",
+            "week": 14,
+            "subject": "AI Agent Capstone",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김범준",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-15",
+            "day": "목",
+            "week": 14,
+            "subject": "AI Agent Capstone",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김범준",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-16",
+            "day": "금",
+            "week": 14,
+            "subject": "AI Agent Capstone",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "배기주",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "김범준",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-17",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-10-18",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-10-19",
+            "day": "월",
+            "week": 15,
+            "subject": "DevOps 이해 및 활용",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "엄진영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "신인철",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-10-20",
+            "day": "화",
+            "week": 15,
+            "subject": "DevOps 이해 및 활용",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "엄진영",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "신인철",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "이용우",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-10-21",
+            "day": "수",
+            "week": 15,
+            "subject": "Vector DB",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "정경윤",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "박길식",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "조홍근",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "백정열",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-10-22",
+            "day": "목",
+            "week": 15,
+            "subject": "AI 서비스 개발 Mini-project",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "박길식",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "한성훈",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-23",
+            "day": "금",
+            "week": 15,
+            "subject": "AI 서비스 개발 Mini-project",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "박길식",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "한성훈",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-24",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-10-25",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-10-26",
+            "day": "월",
+            "week": 16,
+            "subject": "AI 서비스 개발 Mini-project",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "임성열",
+                    "isMainProfessor": true
+                },
+                {
+                    "room": "202",
+                    "classNumber": 2,
+                    "professor": "류홍걸",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "203",
+                    "classNumber": 3,
+                    "professor": "박길식",
+                    "isMainProfessor": false
+                },
+                {
+                    "room": "204",
+                    "classNumber": 4,
+                    "professor": "한성훈",
+                    "isMainProfessor": false
+                }
+            ]
+        },
+        {
+            "date": "2026-10-27",
+            "day": "화",
+            "week": 16,
+            "subject": "AI 프로젝트 방법론",
+            "classes": [
+                {
+                    "room": "201",
+                    "classNumber": 1,
+                    "professor": "최진철",
+                    "isMainProfessor": true
+                }
+            ]
+        },
+        {
+            "date": "2026-10-28",
+            "day": "수",
+            "week": 16,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-10-29",
+            "day": "목",
+            "week": 16,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-10-30",
+            "day": "금",
+            "week": 16,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-10-31",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-11-01",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-11-02",
+            "day": "월",
+            "week": 17,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-03",
+            "day": "화",
+            "week": 17,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-04",
+            "day": "수",
+            "week": 17,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-05",
+            "day": "목",
+            "week": 17,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-06",
+            "day": "금",
+            "week": 17,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-07",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-11-08",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-11-09",
+            "day": "월",
+            "week": 18,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-10",
+            "day": "화",
+            "week": 18,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-11",
+            "day": "수",
+            "week": 18,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-12",
+            "day": "목",
+            "week": 18,
+            "subject": "팀프로젝트 (중간점검)",
+            "classes": []
+        },
+        {
+            "date": "2026-11-13",
+            "day": "금",
+            "week": 18,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-14",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-11-15",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-11-16",
+            "day": "월",
+            "week": 19,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-17",
+            "day": "화",
+            "week": 19,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-18",
+            "day": "수",
+            "week": 19,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-19",
+            "day": "목",
+            "week": 19,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-20",
+            "day": "금",
+            "week": 19,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-21",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-11-22",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-11-23",
+            "day": "월",
+            "week": 20,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-24",
+            "day": "화",
+            "week": 20,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-25",
+            "day": "수",
+            "week": 20,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-26",
+            "day": "목",
+            "week": 20,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-27",
+            "day": "금",
+            "week": 20,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-11-28",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-11-29",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-11-30",
+            "day": "월",
+            "week": 21,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-12-01",
+            "day": "화",
+            "week": 21,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-12-02",
+            "day": "수",
+            "week": 21,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-12-03",
+            "day": "목",
+            "week": 21,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-12-04",
+            "day": "금",
+            "week": 21,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-12-05",
+            "day": "토",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-12-06",
+            "day": "일",
+            "week": null,
+            "subject": null,
+            "classes": []
+        },
+        {
+            "date": "2026-12-07",
+            "day": "월",
+            "week": 22,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-12-08",
+            "day": "화",
+            "week": 22,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-12-09",
+            "day": "수",
+            "week": 22,
+            "subject": "팀프로젝트",
+            "classes": []
+        },
+        {
+            "date": "2026-12-10",
+            "day": "목",
+            "week": 22,
+            "subject": "최종평가(예선)",
+            "classes": []
+        },
+        {
+            "date": "2026-12-11",
+            "day": "금",
+            "week": 22,
+            "subject": "최종평가(본선) / 수료식 (16시 종료)",
+            "classes": []
+        }
+    ]
+}

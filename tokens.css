@@ -1,0 +1,54 @@
+/* Hallmark · macrostructure: Bento Grid · popup information and shortcut tiles
+ * theme: custom · vibe: "restrained red, warm black, technical" · paper: oklch(17.4% 0.003 67.7) · accent: oklch(54.1% 0.200 29.5)
+ * display: Avenir Next Condensed · body: Pretendard · axes: dark / geometric-sans / warm
+ * studied: no · context: user-provided Plan.md · pre-emit critique: P4 H5 E4 S5 R5 V5
+ */
+:root {
+    --color-background: oklch(17.4% 0.003 67.7);
+    --color-surface: oklch(21.6% 0.005 39.4);
+    --color-surface-raised: oklch(25.3% 0.009 43.1);
+    --color-surface-hover: oklch(29.7% 0.012 34.3);
+    --color-border: oklch(34.3% 0.015 37.3);
+    --color-text: oklch(95.4% 0.008 36.6);
+    --color-text-secondary: oklch(78% 0.017 36.5);
+    --color-text-muted: oklch(65.3% 0.021 38.1);
+    --color-text-disabled: oklch(51.1% 0.018 37.8);
+    --color-primary: oklch(54.1% 0.200 29.5);
+    --color-primary-hover: oklch(60.1% 0.206 29.4);
+    --color-primary-active: oklch(47.7% 0.177 29.3);
+    --color-primary-soft: oklch(27% 0.046 28.8);
+    --color-accent-ink: oklch(95.4% 0.008 36.6);
+    --color-focus: oklch(84% 0.088 26.8);
+    --color-success: oklch(75.8% 0.132 155.1);
+    --color-warning: oklch(76.8% 0.128 76.9);
+    --color-error: oklch(71.7% 0.177 27.6);
+    --color-shadow: oklch(8% 0.008 30 / 0.35);
+
+    --font-display: "Avenir Next Condensed", "Arial Narrow", sans-serif;
+    --font-body: Pretendard, "Noto Sans KR", sans-serif;
+
+    --space-2xs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2.5rem;
+    --space-2xl: 4rem;
+
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-md: 1.25rem;
+    --text-lg: 1.5625rem;
+    --text-xl: 1.953rem;
+
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --dur-micro: 120ms;
+    --dur-short: 220ms;
+
+    --rule-thin: 1px;
+    --radius-sm: 0.375rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+}

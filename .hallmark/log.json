@@ -1,0 +1,20 @@
+[
+    {
+        "date": "2026-08-21",
+        "macrostructure": "Bento Grid",
+        "theme": "custom",
+        "theme_axes": "dark / geometric-sans / warm",
+        "vibe": "restrained red, warm black, technical",
+        "enrichment": "none",
+        "brief": "Plan.md popup layout as a static UI"
+    },
+    {
+        "date": "2026-08-21",
+        "macrostructure": "Workbench",
+        "theme": "custom",
+        "theme_axes": "dark / geometric-sans / warm",
+        "vibe": "restrained red, warm black, technical",
+        "enrichment": "none",
+        "brief": "Red Dolphin extension colour system and example UI"
+    }
+]
