@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { nextTick, onMounted, ref } from "vue";
+import type {
+    SyncAttendanceAlarmMessage,
+    SyncAttendanceAlarmResponse,
+} from "../shared/attendance";
 import {
     CLASS_OPTIONS,
     createZoomLinksExport,
@@ -79,9 +83,31 @@ async function saveGeneralSettings(): Promise<void> {
                 DEFAULT_GENERAL_SETTINGS.attendanceAutoRunTime,
         };
         await chrome.storage.sync.set({ generalSettings });
-        generalStatus.value = generalSettings.attendanceAutoRunEnabled
-            ? `매일 ${generalSettings.attendanceAutoRunTime}에 자동 실행합니다.`
-            : "출석체크 자동 실행을 사용하지 않습니다.";
+        const response = await chrome.runtime.sendMessage<
+            SyncAttendanceAlarmMessage,
+            SyncAttendanceAlarmResponse
+        >({ type: "syncAttendanceAlarm" });
+        if (!response?.ok) {
+            throw new Error(
+                response?.error ?? "자동 실행을 예약하지 못했습니다.",
+            );
+        }
+
+        if (
+            generalSettings.attendanceAutoRunEnabled &&
+            response.scheduledTime !== undefined
+        ) {
+            const nextRunLabel = new Intl.DateTimeFormat("ko-KR", {
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+            }).format(new Date(response.scheduledTime));
+            generalStatus.value = `다음 자동 실행: ${nextRunLabel}`;
+        } else {
+            generalStatus.value =
+                "출석체크 자동 실행을 사용하지 않습니다.";
+        }
     } catch {
         generalStatus.value =
             "일반 설정을 저장하지 못했습니다. 다시 시도해 주세요.";

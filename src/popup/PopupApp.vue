@@ -233,7 +233,9 @@ const openStudentPage = async () => {
                 :data-state="attendanceRunning ? 'loading' : undefined"
                 @click="runAttendance"
             >
-                <span>{{ attendanceRunning ? "페이지 여는 중" : "출석체크" }}</span>
+                <span>{{
+                    attendanceRunning ? "페이지 여는 중" : "출석체크"
+                }}</span>
                 <span class="link-arrow" aria-hidden="true">↗</span>
             </button>
             <button
@@ -244,11 +246,7 @@ const openStudentPage = async () => {
                 <span>교육생 포털</span>
                 <span class="link-arrow" aria-hidden="true">↗</span>
             </button>
-            <p
-                v-if="attendanceError"
-                class="quick-action-error"
-                role="status"
-            >
+            <p v-if="attendanceError" class="quick-action-error" role="status">
                 {{ attendanceError }}
             </p>
         </section>
@@ -291,10 +289,7 @@ const openStudentPage = async () => {
         </section>
 
         <footer class="period-footer">
-            <div
-                v-if="unitPeriodProgress"
-                class="period-progress-tooltip"
-            >
+            <div v-if="unitPeriodProgress" class="period-progress-tooltip">
                 <div
                     class="period-progress-content"
                     tabindex="0"

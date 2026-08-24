@@ -1,7 +1,9 @@
 import {
     ATTENDANCE_TARGET_URL,
     isRunAttendanceMessage,
+    isSyncAttendanceAlarmMessage,
     type RunAttendanceResponse,
+    type SyncAttendanceAlarmResponse,
 } from "../shared/attendance";
 import { APP_CONFIG } from "../shared/config";
 import {
@@ -42,7 +44,7 @@ chrome.runtime.onStartup.addListener(() => {
 
 chrome.storage.onChanged.addListener((changes, areaName) => {
     if (areaName === "sync" && changes.generalSettings) {
-        void synchronizeAttendanceAlarm();
+        void synchronizeAttendanceAlarm(true);
     }
 });
 
@@ -60,31 +62,58 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 chrome.runtime.onMessage.addListener(
     (message: unknown, _sender, sendResponse) => {
-        if (!isRunAttendanceMessage(message)) {
-            return false;
+        if (isSyncAttendanceAlarmMessage(message)) {
+            synchronizeAttendanceAlarm(true)
+                .then((scheduledTime) => {
+                    const response: SyncAttendanceAlarmResponse = {
+                        ok: true,
+                        ...(scheduledTime === null
+                            ? {}
+                            : { scheduledTime }),
+                    };
+                    sendResponse(response);
+                })
+                .catch((error: unknown) => {
+                    const response: SyncAttendanceAlarmResponse = {
+                        ok: false,
+                        error:
+                            error instanceof Error
+                                ? error.message
+                                : "자동 실행을 예약하지 못했습니다.",
+                    };
+                    sendResponse(response);
+                });
+
+            return true;
         }
 
-        runAttendanceFlow()
-            .then(() => {
-                const response: RunAttendanceResponse = { ok: true };
-                sendResponse(response);
-            })
-            .catch((error: unknown) => {
-                const response: RunAttendanceResponse = {
-                    ok: false,
-                    error:
-                        error instanceof Error
-                            ? error.message
-                            : "출석 페이지 자동화를 실행하지 못했습니다.",
-                };
-                sendResponse(response);
-            });
+        if (isRunAttendanceMessage(message)) {
+            runAttendanceFlow()
+                .then(() => {
+                    const response: RunAttendanceResponse = { ok: true };
+                    sendResponse(response);
+                })
+                .catch((error: unknown) => {
+                    const response: RunAttendanceResponse = {
+                        ok: false,
+                        error:
+                            error instanceof Error
+                                ? error.message
+                                : "출석 페이지 자동화를 실행하지 못했습니다.",
+                    };
+                    sendResponse(response);
+                });
 
-        return true;
+            return true;
+        }
+
+        return false;
     },
 );
 
-async function synchronizeAttendanceAlarm(): Promise<void> {
+async function synchronizeAttendanceAlarm(
+    allowCurrentMinute = false,
+): Promise<number | null> {
     const stored = await chrome.storage.sync.get({
         generalSettings: DEFAULT_GENERAL_SETTINGS,
     });
@@ -92,7 +121,7 @@ async function synchronizeAttendanceAlarm(): Promise<void> {
 
     await chrome.alarms.clear(ATTENDANCE_AUTO_RUN_ALARM);
     if (!settings.attendanceAutoRunEnabled) {
-        return;
+        return null;
     }
 
     const [hours, minutes] = settings.attendanceAutoRunTime
@@ -101,12 +130,25 @@ async function synchronizeAttendanceAlarm(): Promise<void> {
     const nextRun = new Date();
     nextRun.setHours(hours, minutes, 0, 0);
     if (nextRun.getTime() <= Date.now()) {
-        nextRun.setDate(nextRun.getDate() + 1);
+        const isCurrentMinute =
+            Date.now() - nextRun.getTime() < 60 * 1000;
+        if (allowCurrentMinute && isCurrentMinute) {
+            nextRun.setTime(Date.now() + 1000);
+        } else {
+            nextRun.setDate(nextRun.getDate() + 1);
+        }
     }
 
     chrome.alarms.create(ATTENDANCE_AUTO_RUN_ALARM, {
         when: nextRun.getTime(),
     });
+
+    const alarm = await chrome.alarms.get(ATTENDANCE_AUTO_RUN_ALARM);
+    if (!alarm) {
+        throw new Error("자동 실행 예약을 확인하지 못했습니다.");
+    }
+
+    return alarm.scheduledTime;
 }
 
 async function runAttendanceFlow(): Promise<void> {
