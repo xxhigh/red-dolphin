@@ -1,3 +1,5 @@
+import { APP_CONFIG } from "./config";
+
 export const CLASS_OPTIONS = ["1반", "2반", "3반", "4반"] as const;
 
 export type ClassGroup = (typeof CLASS_OPTIONS)[number];
@@ -6,6 +8,11 @@ export interface UserSettings {
     userName: string;
     classGroup: ClassGroup | "";
     userId: string;
+}
+
+export interface GeneralSettings {
+    attendanceAutoRunEnabled: boolean;
+    attendanceAutoRunTime: string;
 }
 
 export interface ZoomLink {
@@ -26,6 +33,14 @@ export const DEFAULT_USER_SETTINGS: UserSettings = {
     classGroup: "",
     userId: "",
 };
+
+export const DEFAULT_GENERAL_SETTINGS: GeneralSettings = {
+    attendanceAutoRunEnabled:
+        APP_CONFIG.general.attendanceAutoRun.defaultEnabled,
+    attendanceAutoRunTime: APP_CONFIG.general.attendanceAutoRun.defaultTime,
+};
+
+const TIME_PATTERN = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
 
 function isClassGroup(value: unknown): value is ClassGroup {
     return (
@@ -52,6 +67,25 @@ export function parseUserSettings(value: unknown): UserSettings {
             ? candidate.classGroup
             : "",
         userId: typeof candidate.userId === "string" ? candidate.userId : "",
+    };
+}
+
+export function parseGeneralSettings(value: unknown): GeneralSettings {
+    if (typeof value !== "object" || value === null) {
+        return { ...DEFAULT_GENERAL_SETTINGS };
+    }
+
+    const candidate = value as Record<string, unknown>;
+    return {
+        attendanceAutoRunEnabled:
+            typeof candidate.attendanceAutoRunEnabled === "boolean"
+                ? candidate.attendanceAutoRunEnabled
+                : DEFAULT_GENERAL_SETTINGS.attendanceAutoRunEnabled,
+        attendanceAutoRunTime:
+            typeof candidate.attendanceAutoRunTime === "string" &&
+            TIME_PATTERN.test(candidate.attendanceAutoRunTime)
+                ? candidate.attendanceAutoRunTime
+                : DEFAULT_GENERAL_SETTINGS.attendanceAutoRunTime,
     };
 }
 

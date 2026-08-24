@@ -3,12 +3,15 @@ import { nextTick, onMounted, ref } from "vue";
 import {
     CLASS_OPTIONS,
     createZoomLinksExport,
+    DEFAULT_GENERAL_SETTINGS,
     DEFAULT_USER_SETTINGS,
     normalizeMeetingCode,
+    parseGeneralSettings,
     parseUserSettings,
     parseZoomLinks,
     parseZoomLinksExport,
     type ClassGroup,
+    type GeneralSettings,
     type UserSettings,
     type ZoomLink,
 } from "../shared/settings";
@@ -16,6 +19,15 @@ import {
 const userName = ref("");
 const classGroup = ref<ClassGroup | "">("");
 const userId = ref("");
+const attendanceAutoRunEnabled = ref(
+    DEFAULT_GENERAL_SETTINGS.attendanceAutoRunEnabled,
+);
+const attendanceAutoRunTime = ref(
+    DEFAULT_GENERAL_SETTINGS.attendanceAutoRunTime,
+);
+const generalSaving = ref(false);
+const generalStatus = ref("");
+const generalSaveError = ref(false);
 const saved = ref(false);
 const saving = ref(false);
 const saveError = ref(false);
@@ -36,9 +48,14 @@ const MAX_ZOOM_IMPORT_BYTES = 1_000_000;
 onMounted(async () => {
     try {
         const stored = await chrome.storage.sync.get({
+            generalSettings: DEFAULT_GENERAL_SETTINGS,
             userSettings: DEFAULT_USER_SETTINGS,
             zoomLinks: [],
         });
+        const generalSettings = parseGeneralSettings(stored.generalSettings);
+        attendanceAutoRunEnabled.value =
+            generalSettings.attendanceAutoRunEnabled;
+        attendanceAutoRunTime.value = generalSettings.attendanceAutoRunTime;
         const settings = parseUserSettings(stored.userSettings);
         userName.value = settings.userName;
         classGroup.value = settings.classGroup;
@@ -48,6 +65,31 @@ onMounted(async () => {
         saveError.value = true;
     }
 });
+
+async function saveGeneralSettings(): Promise<void> {
+    generalSaving.value = true;
+    generalStatus.value = "";
+    generalSaveError.value = false;
+
+    try {
+        const generalSettings: GeneralSettings = {
+            attendanceAutoRunEnabled: attendanceAutoRunEnabled.value,
+            attendanceAutoRunTime:
+                attendanceAutoRunTime.value ||
+                DEFAULT_GENERAL_SETTINGS.attendanceAutoRunTime,
+        };
+        await chrome.storage.sync.set({ generalSettings });
+        generalStatus.value = generalSettings.attendanceAutoRunEnabled
+            ? `매일 ${generalSettings.attendanceAutoRunTime}에 자동 실행합니다.`
+            : "출석체크 자동 실행을 사용하지 않습니다.";
+    } catch {
+        generalStatus.value =
+            "일반 설정을 저장하지 못했습니다. 다시 시도해 주세요.";
+        generalSaveError.value = true;
+    } finally {
+        generalSaving.value = false;
+    }
+}
 
 async function save(): Promise<void> {
     saving.value = true;
@@ -281,6 +323,55 @@ async function importZoomLinks(event: Event): Promise<void> {
             </div>
             <p class="intro">설정 변경 후 저장을 눌러주세요.</p>
         </div>
+
+        <section
+            class="settings-section general-settings-section"
+            aria-labelledby="general-settings-heading"
+        >
+            <div class="settings-heading">
+                <h2 id="general-settings-heading">일반 설정</h2>
+                <p>확장 프로그램의 기본 동작을 설정합니다.</p>
+            </div>
+
+            <div class="general-setting-row">
+                <label class="checkbox-setting">
+                    <input
+                        v-model="attendanceAutoRunEnabled"
+                        type="checkbox"
+                        name="attendanceAutoRunEnabled"
+                        :disabled="generalSaving"
+                        @change="saveGeneralSettings"
+                    />
+                    <span class="checkbox-setting-copy">
+                        <strong>출석체크 자동 실행</strong>
+                        <small>설정한 시간에 출석 페이지를 자동으로 엽니다.</small>
+                    </span>
+                </label>
+
+                <label class="auto-attendance-time">
+                    <span>실행 시간</span>
+                    <input
+                        v-model="attendanceAutoRunTime"
+                        class="form-control"
+                        type="time"
+                        name="attendanceAutoRunTime"
+                        step="60"
+                        :disabled="
+                            !attendanceAutoRunEnabled || generalSaving
+                        "
+                        @change="saveGeneralSettings"
+                    />
+                </label>
+            </div>
+
+            <p
+                class="general-settings-status"
+                :class="{ error: generalSaveError }"
+                aria-live="polite"
+            >
+                {{ generalStatus }}
+            </p>
+        </section>
 
         <section
             class="settings-section"

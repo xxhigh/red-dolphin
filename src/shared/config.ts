@@ -54,6 +54,13 @@ const UNIT_PERIODS: UnitPeriodConfig[] = [
 ];
 
 export const APP_CONFIG = {
+    general: {
+        attendanceAutoRun: {
+            alarmName: "attendance-auto-run",
+            defaultEnabled: false,
+            defaultTime: "17:50",
+        },
+    },
     urls: {
         attendance: "https://auth.skala-ai.com",
         studentPortal: "https://student.skala-ai.com/",

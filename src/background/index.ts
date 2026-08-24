@@ -3,14 +3,19 @@ import {
     isRunAttendanceMessage,
     type RunAttendanceResponse,
 } from "../shared/attendance";
+import { APP_CONFIG } from "../shared/config";
 import {
+    DEFAULT_GENERAL_SETTINGS,
     DEFAULT_USER_SETTINGS,
+    parseGeneralSettings,
     parseUserSettings,
     type ClassGroup,
     type UserSettings,
 } from "../shared/settings";
 
 const USER_AGENT_RULE_ID = 1001;
+const ATTENDANCE_AUTO_RUN_ALARM =
+    APP_CONFIG.general.attendanceAutoRun.alarmName;
 const MOBILE_USER_AGENT =
     "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/126.0.0.0 Mobile/15E148 Safari/604.1";
 const PAGE_LOAD_TIMEOUT_MS = 30_000;
@@ -26,6 +31,32 @@ interface AttendanceField {
     value: string;
     delaySeconds: number;
 }
+
+chrome.runtime.onInstalled.addListener(() => {
+    void synchronizeAttendanceAlarm();
+});
+
+chrome.runtime.onStartup.addListener(() => {
+    void synchronizeAttendanceAlarm();
+});
+
+chrome.storage.onChanged.addListener((changes, areaName) => {
+    if (areaName === "sync" && changes.generalSettings) {
+        void synchronizeAttendanceAlarm();
+    }
+});
+
+chrome.alarms.onAlarm.addListener((alarm) => {
+    if (alarm.name !== ATTENDANCE_AUTO_RUN_ALARM) {
+        return;
+    }
+
+    void runAttendanceFlow()
+        .catch((error: unknown) => {
+            console.error("예약된 출석체크를 실행하지 못했습니다.", error);
+        })
+        .finally(() => synchronizeAttendanceAlarm());
+});
 
 chrome.runtime.onMessage.addListener(
     (message: unknown, _sender, sendResponse) => {
@@ -52,6 +83,31 @@ chrome.runtime.onMessage.addListener(
         return true;
     },
 );
+
+async function synchronizeAttendanceAlarm(): Promise<void> {
+    const stored = await chrome.storage.sync.get({
+        generalSettings: DEFAULT_GENERAL_SETTINGS,
+    });
+    const settings = parseGeneralSettings(stored.generalSettings);
+
+    await chrome.alarms.clear(ATTENDANCE_AUTO_RUN_ALARM);
+    if (!settings.attendanceAutoRunEnabled) {
+        return;
+    }
+
+    const [hours, minutes] = settings.attendanceAutoRunTime
+        .split(":")
+        .map(Number);
+    const nextRun = new Date();
+    nextRun.setHours(hours, minutes, 0, 0);
+    if (nextRun.getTime() <= Date.now()) {
+        nextRun.setDate(nextRun.getDate() + 1);
+    }
+
+    chrome.alarms.create(ATTENDANCE_AUTO_RUN_ALARM, {
+        when: nextRun.getTime(),
+    });
+}
 
 async function runAttendanceFlow(): Promise<void> {
     const stored = await chrome.storage.sync.get({
