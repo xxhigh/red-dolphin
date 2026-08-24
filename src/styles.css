@@ -803,6 +803,26 @@ h2 {
     gap: var(--space-md);
 }
 
+.zoom-toolbar-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.zoom-toolbar-actions .compact-button {
+    min-width: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 .secondary-button {
     border-color: var(--color-border);
     color: var(--color-text);

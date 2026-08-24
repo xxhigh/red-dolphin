@@ -14,6 +14,13 @@ export interface ZoomLink {
     meetingCode: string;
 }
 
+export interface ZoomLinksExport {
+    format: "red-dolphin.zoom-links";
+    version: 1;
+    exportedAt: string;
+    zoomLinks: ZoomLink[];
+}
+
 export const DEFAULT_USER_SETTINGS: UserSettings = {
     userName: "",
     classGroup: "",
@@ -76,4 +83,34 @@ export function parseZoomLinks(value: unknown): ZoomLink[] {
 
         return [{ id, nickname, meetingCode }];
     });
+}
+
+export function createZoomLinksExport(
+    zoomLinks: ZoomLink[],
+    exportedAt = new Date(),
+): ZoomLinksExport {
+    return {
+        format: "red-dolphin.zoom-links",
+        version: 1,
+        exportedAt: exportedAt.toISOString(),
+        zoomLinks,
+    };
+}
+
+export function parseZoomLinksExport(value: unknown): ZoomLink[] | null {
+    if (typeof value !== "object" || value === null) {
+        return null;
+    }
+
+    const candidate = value as Record<string, unknown>;
+    if (
+        candidate.format !== "red-dolphin.zoom-links" ||
+        candidate.version !== 1 ||
+        !Array.isArray(candidate.zoomLinks)
+    ) {
+        return null;
+    }
+
+    const zoomLinks = parseZoomLinks(candidate.zoomLinks);
+    return zoomLinks.length === candidate.zoomLinks.length ? zoomLinks : null;
 }

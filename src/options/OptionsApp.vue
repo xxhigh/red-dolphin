@@ -2,10 +2,12 @@
 import { nextTick, onMounted, ref } from "vue";
 import {
     CLASS_OPTIONS,
+    createZoomLinksExport,
     DEFAULT_USER_SETTINGS,
     normalizeMeetingCode,
     parseUserSettings,
     parseZoomLinks,
+    parseZoomLinksExport,
     type ClassGroup,
     type UserSettings,
     type ZoomLink,
@@ -20,6 +22,7 @@ const saveError = ref(false);
 const zoomLinks = ref<ZoomLink[]>([]);
 const zoomDialog = ref<HTMLDialogElement | null>(null);
 const zoomNicknameInput = ref<HTMLInputElement | null>(null);
+const zoomImportInput = ref<HTMLInputElement | null>(null);
 const editingZoomId = ref<string | null>(null);
 const zoomNickname = ref("");
 const zoomMeetingCode = ref("");
@@ -27,6 +30,8 @@ const zoomSaving = ref(false);
 const zoomDialogError = ref("");
 const zoomStatus = ref("");
 const zoomStatusError = ref(false);
+const zoomImporting = ref(false);
+const MAX_ZOOM_IMPORT_BYTES = 1_000_000;
 
 onMounted(async () => {
     try {
@@ -166,6 +171,96 @@ async function removeZoomLink(id: string): Promise<void> {
         zoomStatusError.value = true;
     }
 }
+
+function openZoomImportPicker(): void {
+    zoomStatus.value = "";
+    zoomStatusError.value = false;
+    zoomImportInput.value?.click();
+}
+
+function exportZoomLinks(): void {
+    const exportData = createZoomLinksExport(zoomLinks.value);
+    const contents = JSON.stringify(exportData, null, 4);
+    const blob = new Blob([contents], { type: "application/json" });
+    const downloadUrl = URL.createObjectURL(blob);
+    const date = new Date().toISOString().slice(0, 10);
+    const anchor = document.createElement("a");
+
+    anchor.href = downloadUrl;
+    anchor.download = `red-dolphin-zoom-links-${date}.dolphin`;
+    anchor.click();
+    window.setTimeout(() => URL.revokeObjectURL(downloadUrl), 0);
+
+    zoomStatus.value = `Zoom 링크 ${zoomLinks.value.length}개를 내보냈습니다.`;
+    zoomStatusError.value = false;
+}
+
+async function importZoomLinks(event: Event): Promise<void> {
+    const input = event.currentTarget;
+    if (!(input instanceof HTMLInputElement)) {
+        return;
+    }
+
+    const file = input.files?.[0];
+    input.value = "";
+    if (!file) {
+        return;
+    }
+
+    if (file.size > MAX_ZOOM_IMPORT_BYTES) {
+        zoomStatus.value = "1MB 이하의 Dolphin 파일을 선택해 주세요.";
+        zoomStatusError.value = true;
+        return;
+    }
+
+    zoomImporting.value = true;
+    zoomStatus.value = "";
+    zoomStatusError.value = false;
+
+    try {
+        const parsed: unknown = JSON.parse(await file.text());
+        const importedLinks = parseZoomLinksExport(parsed);
+        if (!importedLinks) {
+            throw new Error("지원하지 않는 Zoom 링크 파일입니다.");
+        }
+
+        const existingMeetingCodes = new Set(
+            zoomLinks.value.map((link) => link.meetingCode),
+        );
+        const existingIds = new Set(zoomLinks.value.map((link) => link.id));
+        const linksToAdd = importedLinks.flatMap((link) => {
+            if (existingMeetingCodes.has(link.meetingCode)) {
+                return [];
+            }
+
+            existingMeetingCodes.add(link.meetingCode);
+            const id = existingIds.has(link.id) ? crypto.randomUUID() : link.id;
+            existingIds.add(id);
+            return [{ ...link, id }];
+        });
+        const skippedCount = importedLinks.length - linksToAdd.length;
+        const nextLinks = [...zoomLinks.value, ...linksToAdd];
+
+        if (linksToAdd.length > 0) {
+            await chrome.storage.sync.set({ zoomLinks: nextLinks });
+            zoomLinks.value = nextLinks;
+        }
+
+        zoomStatus.value = `${linksToAdd.length}개를 가져왔습니다.${
+            skippedCount > 0
+                ? ` 중복된 미팅 코드 ${skippedCount}개는 건너뛰었습니다.`
+                : ""
+        }`;
+    } catch (error: unknown) {
+        zoomStatus.value =
+            error instanceof Error
+                ? error.message
+                : "Zoom 링크를 가져오지 못했습니다.";
+        zoomStatusError.value = true;
+    } finally {
+        zoomImporting.value = false;
+    }
+}
 </script>
 
 <template>
@@ -294,13 +389,38 @@ async function removeZoomLink(id: string): Promise<void> {
                     <h2 id="zoom-settings-heading">Zoom 설정</h2>
                     <p>자주 사용하는 Zoom 미팅 코드를 관리합니다.</p>
                 </div>
-                <button
-                    class="secondary-button"
-                    type="button"
-                    @click="openAddZoomDialog"
-                >
-                    + Zoom 링크 추가
-                </button>
+                <div class="zoom-toolbar-actions">
+                    <input
+                        ref="zoomImportInput"
+                        class="visually-hidden"
+                        type="file"
+                        accept=".dolphin,application/json,.json"
+                        @change="importZoomLinks"
+                    />
+                    <button
+                        class="secondary-button compact-button"
+                        type="button"
+                        :disabled="zoomImporting"
+                        @click="openZoomImportPicker"
+                    >
+                        {{ zoomImporting ? "Import 중" : "Import" }}
+                    </button>
+                    <button
+                        class="secondary-button compact-button"
+                        type="button"
+                        :disabled="zoomLinks.length === 0"
+                        @click="exportZoomLinks"
+                    >
+                        Export
+                    </button>
+                    <button
+                        class="secondary-button"
+                        type="button"
+                        @click="openAddZoomDialog"
+                    >
+                        + Zoom 링크 추가
+                    </button>
+                </div>
             </div>
 
             <p v-if="zoomLinks.length === 0" class="empty-state">
