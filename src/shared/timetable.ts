@@ -29,6 +29,7 @@ export interface TodayClassInfo {
 }
 
 const timetable = timeTableData as TimetableData;
+const NON_ATTENDANCE_SUBJECT_PATTERN = /휴일|연휴|휴강|한글날/;
 
 export function formatLocalDate(date: Date): string {
     const year = date.getFullYear();
@@ -65,4 +66,23 @@ export function findClassInfo(
                 : null,
         selectedClassIsMain: selectedProfessor?.isMainProfessor ?? false,
     };
+}
+
+export function countRemainingAttendanceDays(
+    currentDateKey: string,
+    endDateKey: string,
+): number {
+    return timetable.entries.filter((entry) => {
+        const isWeekday = entry.day !== "토" && entry.day !== "일";
+        const hasAttendanceSchedule =
+            entry.subject !== null &&
+            !NON_ATTENDANCE_SUBJECT_PATTERN.test(entry.subject);
+
+        return (
+            entry.date > currentDateKey &&
+            entry.date <= endDateKey &&
+            isWeekday &&
+            hasAttendanceSchedule
+        );
+    }).length;
 }

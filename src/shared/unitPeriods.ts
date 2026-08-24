@@ -1,3 +1,8 @@
+import {
+    countRemainingAttendanceDays,
+    formatLocalDate,
+} from "./timetable";
+
 const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
 
 export interface UnitPeriod {
@@ -11,8 +16,10 @@ export interface UnitPeriod {
 export interface UnitPeriodProgress {
     period: UnitPeriod;
     remainingDays: number;
+    remainingAttendanceDays: number;
     totalDays: number;
-    remainingPercent: number;
+    elapsedDays: number;
+    elapsedPercent: number;
 }
 
 export const UNIT_PERIODS: UnitPeriod[] = [
@@ -83,12 +90,19 @@ export function getUnitPeriodProgress(
     const endDay = parseDateKey(period.endDate);
     const totalDays = endDay - startDay;
     const remainingDays = Math.max(0, endDay - currentDay);
+    const elapsedDays = Math.max(0, currentDay - startDay);
+    const remainingAttendanceDays = countRemainingAttendanceDays(
+        formatLocalDate(date),
+        period.endDate,
+    );
 
     return {
         period,
         remainingDays,
+        remainingAttendanceDays,
         totalDays,
-        remainingPercent:
-            totalDays === 0 ? 0 : (remainingDays / totalDays) * 100,
+        elapsedDays,
+        elapsedPercent:
+            totalDays === 0 ? 100 : (elapsedDays / totalDays) * 100,
     };
 }

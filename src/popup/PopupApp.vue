@@ -298,27 +298,30 @@ const openStudentPage = async () => {
                 <div
                     class="period-progress-content"
                     tabindex="0"
-                    :aria-label="`${unitPeriodProgress.period.number}차 단위기간, 종료일까지 ${unitPeriodProgress.remainingDays}일 남음`"
+                    :aria-label="`${unitPeriodProgress.period.number}차 단위기간, 종료일까지 ${unitPeriodProgress.remainingDays}일, 출석일 ${unitPeriodProgress.remainingAttendanceDays}일 남음`"
                     aria-describedby="period-progress-tooltip"
                 >
                     <div class="period-progress-heading">
                         <span>
                             {{ unitPeriodProgress.period.number }}차 단위기간
                         </span>
-                        <strong>{{ unitPeriodCountdown }}</strong>
+                        <strong>
+                            {{ unitPeriodCountdown }} · 출석
+                            {{ unitPeriodProgress.remainingAttendanceDays }}일
+                        </strong>
                     </div>
                     <div
                         class="period-progress-track"
                         role="progressbar"
-                        aria-label="단위기간 남은 일수"
+                        aria-label="단위기간 진행률"
                         aria-valuemin="0"
                         :aria-valuemax="unitPeriodProgress.totalDays"
-                        :aria-valuenow="unitPeriodProgress.remainingDays"
+                        :aria-valuenow="unitPeriodProgress.elapsedDays"
                     >
                         <span
                             class="period-progress-fill"
                             :style="{
-                                width: `${unitPeriodProgress.remainingPercent}%`,
+                                width: `${unitPeriodProgress.elapsedPercent}%`,
                             }"
                         />
                     </div>
@@ -339,6 +342,10 @@ const openStudentPage = async () => {
                     </span>
                     <span>
                         남은 일수 {{ unitPeriodProgress.remainingDays }}일
+                    </span>
+                    <span>
+                        남은 출석일
+                        {{ unitPeriodProgress.remainingAttendanceDays }}일
                     </span>
                 </div>
             </div>
