@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Red Dolphin for SKALA",
     "description": "Student Utility for SKALA ULSAN",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "action": {
         "default_title": "Red Dolphin",
         "default_popup": "popup.html",
