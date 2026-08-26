@@ -11,6 +11,7 @@ body {
 :root {
     color: var(--color-text);
     background: var(--color-background);
+    color-scheme: var(--color-scheme);
     font-family: var(--font-body);
     font-size: var(--text-base);
     font-synthesis: none;
@@ -69,6 +70,107 @@ input[type="checkbox"] {
     justify-content: space-between;
     gap: var(--space-lg);
     margin-block-start: var(--space-lg);
+}
+
+.general-settings-heading-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+    gap: var(--space-lg);
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+
+.theme-switch input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+}
+
+.theme-switch-track {
+    display: flex;
+    align-items: center;
+    width: 3rem;
+    height: 1.75rem;
+    padding: 0.1875rem;
+    border: var(--rule-thin) solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-hover);
+    transition:
+        background-color var(--dur-short) var(--ease-out),
+        border-color var(--dur-short) var(--ease-out);
+}
+
+.theme-switch-thumb {
+    display: grid;
+    width: 1.25rem;
+    height: 1.25rem;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--color-surface-raised);
+    background: var(--color-text-secondary);
+    box-shadow: 0 0.125rem 0.375rem var(--color-shadow);
+    transition:
+        background-color var(--dur-short) var(--ease-out),
+        transform var(--dur-short) var(--ease-out);
+}
+
+.theme-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.theme-icon-sun {
+    display: none;
+}
+
+.theme-switch input:checked + .theme-switch-track {
+    border-color: var(--color-primary);
+    background: var(--color-primary-soft);
+}
+
+.theme-switch input:checked + .theme-switch-track .theme-switch-thumb {
+    background: var(--color-primary);
+    transform: translateX(1.25rem);
+}
+
+.theme-switch input:checked + .theme-switch-track .theme-icon-moon {
+    display: none;
+}
+
+.theme-switch input:checked + .theme-switch-track .theme-icon-sun {
+    display: block;
+}
+
+.theme-switch input:focus-visible + .theme-switch-track {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+.theme-switch input:active + .theme-switch-track .theme-switch-thumb {
+    transform: scale(0.9);
+}
+
+.theme-switch input:checked:active + .theme-switch-track .theme-switch-thumb {
+    transform: translateX(1.25rem) scale(0.9);
+}
+
+.theme-switch input:disabled + .theme-switch-track {
+    cursor: not-allowed;
+    opacity: 0.55;
 }
 
 .checkbox-setting {
@@ -816,7 +918,7 @@ h2 {
     border-radius: var(--radius-sm);
     color: var(--color-text);
     background: var(--color-surface);
-    color-scheme: dark;
+    color-scheme: var(--color-scheme);
     font-size: var(--text-base);
     font-weight: 400;
     transition:
@@ -1185,7 +1287,7 @@ h2 {
     .secondary-button:hover {
         border-color: var(--color-primary-hover);
         color: var(--color-text);
-        background: var(--color-surface);
+        background: var(--color-surface-raised);
         transform: none;
     }
 
@@ -1207,6 +1309,10 @@ h2 {
 
     .setting-row input:hover {
         opacity: 0.82;
+    }
+
+    .theme-switch:hover .theme-switch-track {
+        border-color: var(--color-primary-hover);
     }
 }
 

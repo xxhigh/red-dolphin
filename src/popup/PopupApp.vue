@@ -43,8 +43,10 @@ const classTitle = computed(
         todayClassInfo.value.entry?.subject ?? "오늘은 예정된 수업이 없습니다",
 );
 const mainProfessorLabel = computed(() => {
-    const professor = todayClassInfo.value.mainProfessor?.professor;
-    return professor ? `메인 · ${professor}` : "교수 정보 없음";
+    const mainProfessor = todayClassInfo.value.mainProfessor;
+    return mainProfessor
+        ? `메인 · ${mainProfessor.professor}(${mainProfessor.classNumber}반)`
+        : "교수 정보 없음";
 });
 const professorTooltip = computed(() => {
     const classGroup = userSettings.value.classGroup;

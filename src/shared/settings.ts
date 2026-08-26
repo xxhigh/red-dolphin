@@ -3,6 +3,7 @@ import { APP_CONFIG } from "./config";
 export const CLASS_OPTIONS = ["1반", "2반", "3반", "4반"] as const;
 
 export type ClassGroup = (typeof CLASS_OPTIONS)[number];
+export type Theme = "dark" | "light";
 
 export interface UserSettings {
     userName: string;
@@ -13,6 +14,7 @@ export interface UserSettings {
 export interface GeneralSettings {
     attendanceAutoRunEnabled: boolean;
     attendanceAutoRunTime: string;
+    theme: Theme;
 }
 
 export interface ZoomLink {
@@ -38,9 +40,14 @@ export const DEFAULT_GENERAL_SETTINGS: GeneralSettings = {
     attendanceAutoRunEnabled:
         APP_CONFIG.general.attendanceAutoRun.defaultEnabled,
     attendanceAutoRunTime: APP_CONFIG.general.attendanceAutoRun.defaultTime,
+    theme: "dark",
 };
 
 const TIME_PATTERN = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
+
+function isTheme(value: unknown): value is Theme {
+    return value === "dark" || value === "light";
+}
 
 function isClassGroup(value: unknown): value is ClassGroup {
     return (
@@ -86,6 +93,9 @@ export function parseGeneralSettings(value: unknown): GeneralSettings {
             TIME_PATTERN.test(candidate.attendanceAutoRunTime)
                 ? candidate.attendanceAutoRunTime
                 : DEFAULT_GENERAL_SETTINGS.attendanceAutoRunTime,
+        theme: isTheme(candidate.theme)
+            ? candidate.theme
+            : DEFAULT_GENERAL_SETTINGS.theme,
     };
 }
 

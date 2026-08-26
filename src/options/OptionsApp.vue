@@ -19,6 +19,7 @@ import {
     type UserSettings,
     type ZoomLink,
 } from "../shared/settings";
+import { applyTheme } from "../shared/theme";
 
 const userName = ref("");
 const classGroup = ref<ClassGroup | "">("");
@@ -29,6 +30,8 @@ const attendanceAutoRunEnabled = ref(
 const attendanceAutoRunTime = ref(
     DEFAULT_GENERAL_SETTINGS.attendanceAutoRunTime,
 );
+const lightThemeEnabled = ref(DEFAULT_GENERAL_SETTINGS.theme === "light");
+const themeSaving = ref(false);
 const generalSaving = ref(false);
 const generalStatus = ref("");
 const generalSaveError = ref(false);
@@ -60,6 +63,7 @@ onMounted(async () => {
         attendanceAutoRunEnabled.value =
             generalSettings.attendanceAutoRunEnabled;
         attendanceAutoRunTime.value = generalSettings.attendanceAutoRunTime;
+        lightThemeEnabled.value = generalSettings.theme === "light";
         const settings = parseUserSettings(stored.userSettings);
         userName.value = settings.userName;
         classGroup.value = settings.classGroup;
@@ -81,6 +85,7 @@ async function saveGeneralSettings(): Promise<void> {
             attendanceAutoRunTime:
                 attendanceAutoRunTime.value ||
                 DEFAULT_GENERAL_SETTINGS.attendanceAutoRunTime,
+            theme: lightThemeEnabled.value ? "light" : "dark",
         };
         await chrome.storage.sync.set({ generalSettings });
         const response = await chrome.runtime.sendMessage<
@@ -114,6 +119,37 @@ async function saveGeneralSettings(): Promise<void> {
         generalSaveError.value = true;
     } finally {
         generalSaving.value = false;
+    }
+}
+
+async function saveThemePreference(): Promise<void> {
+    const nextTheme = lightThemeEnabled.value ? "light" : "dark";
+    const previousTheme = nextTheme === "light" ? "dark" : "light";
+    themeSaving.value = true;
+    generalStatus.value = "";
+    generalSaveError.value = false;
+    applyTheme(nextTheme);
+
+    try {
+        const generalSettings: GeneralSettings = {
+            attendanceAutoRunEnabled: attendanceAutoRunEnabled.value,
+            attendanceAutoRunTime:
+                attendanceAutoRunTime.value ||
+                DEFAULT_GENERAL_SETTINGS.attendanceAutoRunTime,
+            theme: nextTheme,
+        };
+        await chrome.storage.sync.set({ generalSettings });
+        generalStatus.value = `${
+            nextTheme === "light" ? "라이트" : "다크"
+        } 테마를 적용했습니다.`;
+    } catch {
+        lightThemeEnabled.value = previousTheme === "light";
+        applyTheme(previousTheme);
+        generalStatus.value =
+            "테마 설정을 저장하지 못했습니다. 다시 시도해 주세요.";
+        generalSaveError.value = true;
+    } finally {
+        themeSaving.value = false;
     }
 }
 
@@ -354,9 +390,54 @@ async function importZoomLinks(event: Event): Promise<void> {
             class="settings-section general-settings-section"
             aria-labelledby="general-settings-heading"
         >
-            <div class="settings-heading">
-                <h2 id="general-settings-heading">일반 설정</h2>
-                <p>확장 프로그램의 기본 동작을 설정합니다.</p>
+            <div class="general-settings-heading-row">
+                <div class="settings-heading">
+                    <h2 id="general-settings-heading">일반 설정</h2>
+                    <p>확장 프로그램의 기본 동작을 설정합니다.</p>
+                </div>
+                <label
+                    class="theme-switch"
+                    :title="
+                        lightThemeEnabled
+                            ? '다크 테마로 변경'
+                            : '라이트 테마로 변경'
+                    "
+                >
+                    <input
+                        v-model="lightThemeEnabled"
+                        type="checkbox"
+                        role="switch"
+                        name="lightThemeEnabled"
+                        :aria-label="
+                            lightThemeEnabled
+                                ? '다크 테마로 변경'
+                                : '라이트 테마로 변경'
+                        "
+                        :disabled="themeSaving"
+                        @change="saveThemePreference"
+                    />
+                    <span class="theme-switch-track" aria-hidden="true">
+                        <span class="theme-switch-thumb">
+                            <svg
+                                class="theme-icon theme-icon-moon"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M20.4 15.2A8.5 8.5 0 0 1 8.8 3.6 8.5 8.5 0 1 0 20.4 15.2Z"
+                                />
+                            </svg>
+                            <svg
+                                class="theme-icon theme-icon-sun"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle cx="12" cy="12" r="3.5" />
+                                <path
+                                    d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"
+                                />
+                            </svg>
+                        </span>
+                    </span>
+                </label>
             </div>
 
             <div class="general-setting-row">

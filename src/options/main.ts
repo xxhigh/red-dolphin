@@ -1,5 +1,11 @@
 import { createApp } from "vue";
 import OptionsApp from "./OptionsApp.vue";
+import { initializeTheme } from "../shared/theme";
 import "../styles.css";
 
-createApp(OptionsApp).mount("#app");
+async function bootstrap(): Promise<void> {
+    await initializeTheme();
+    createApp(OptionsApp).mount("#app");
+}
+
+void bootstrap();
